@@ -1,0 +1,12 @@
+.card{
+    padding: var(--spacing-12) var(--spacing-20);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius-round);
+    width: clamp(12vw, 15rem, calc(100vw - 2 * var(--spacing-16)));
+    min-height: 6rem;
+
+    h2{
+        font-size: var(--font-20);
+        margin-bottom: var(--spacing-8);
+    }
+}

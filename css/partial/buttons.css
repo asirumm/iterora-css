@@ -37,3 +37,7 @@
 .button-secondary:focus {
     filter: brightness(120%);
 }
+
+.button-small{
+    padding: var(--spacing-4) var(--spacing-8);
+}

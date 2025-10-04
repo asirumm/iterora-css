@@ -16,3 +16,10 @@
 .text-vertical-middle{
     vertical-align: middle;
 }
+.text-muted{
+    content: var(--text-muted);
+}
+.text-title{
+    font-weight: 600;
+    font-size: var(--font-20);
+}

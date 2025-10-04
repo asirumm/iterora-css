@@ -51,6 +51,11 @@ input, select {
     color: var(--text);
     background-color: var(--bg);
 }
+form > input:focus,
+form > select:focus {
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary), transparent 70%);
+}
 input::placeholder{
     color: var(--text-muted);
 }
