@@ -1,0 +1,41 @@
+.alert-container{
+    padding: var(--spacing-16) var(--spacing-20);
+    border: 1px solid var();
+    border-radius: var(--border-radius-round);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+
+    width: fit-content;
+    height: fit-content;
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+
+    animation: hideAlert .1s ease-in 5s;
+    animation-fill-mode: forwards;
+}
+
+.alert-title{
+    font-weight: 700;
+}
+
+@keyframes hideAlert {
+    0% {
+        opacity: 1;
+        height: auto;
+    }
+
+    99% {
+        opacity: 0;
+        height: auto;
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+    }
+}

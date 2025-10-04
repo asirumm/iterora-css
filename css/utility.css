@@ -1,0 +1,18 @@
+.bg-danger{
+    background: var(--danger);
+}
+
+.bg-warning{
+    background: var(--warning);
+}
+
+.bg-success{
+    background: var(--success);
+}
+
+.text-center{
+    text-align: center;
+}
+.text-vertical-middle{
+    vertical-align: middle;
+}

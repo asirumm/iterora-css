@@ -1,0 +1,73 @@
+
+:root{
+    /*Dark*/
+    --bg-black-dark:hsl(0,0%,0%);
+    --bg-black-netral:hsl(0,0%,10%);
+    --bg-black-light:hsl(0,0%,15%);
+
+    --text-dark-mode-netral:hsl(0,0%,95%);
+    --text-dark-mode-muted:hsl(0,0%,65%);
+
+    --border-dark-mode:hsl(0,0%,30%);
+
+    /*Light*/
+    --bg-white-dark:hsl(0,0%,85%);
+    --bg-white-netral:hsl(0,0%,100%);
+    --bg-white-light:hsl(0,0%,90%);
+
+    --text-light-mode-netral:hsl(0,0%,5%);
+    --text-light-mode-black-muted:hsl(0,0%,35%);
+
+    --border-light-mode:hsl(0,0%,70%);
+
+
+    /*css current used*/
+    --bg:var(--bg-black-dark);
+    --bg-medium:var(--bg-black-netral);
+    --bg-light:var(--bg-black-light);
+
+    --text:var(--text-dark-mode-netral);
+    --text-muted:var(--text-dark-mode-muted);
+
+    --border:var(--border-dark-mode);
+
+    /*primary*/
+    --primary:hsl(166, 80%, 35%);
+    --primary-dark:hsl(166, 40%, 35%);
+
+
+    --danger:hsl(0, 80%, 35%);
+    --warning:hsl(45, 80%, 35%);
+    --success:hsl(230, 77%, 35%);
+
+
+    --border-radius-sharp:3px;
+    --border-radius-round:9px;
+
+    --font-style:"Inter", sans-serif;
+    --font-8:0.5rem;
+    --font-12:0.75rem;
+    --font-16:1rem;
+    --font-20:1.25rem;
+    --font-28:1.75rem;
+    --font-40:2.5rem;
+
+    --spacing-4:0.25rem;
+    --spacing-8:0.5rem;
+    --spacing-12:0.75rem;
+    --spacing-16:1rem;
+    --spacing-20:1.25rem;
+    --spacing-28:1.75rem;
+    --spacing-40:2.5rem;
+    --spacing-60:3.75rem;
+
+    --icon:26px;
+}
+body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-style);
+}
+
+.close-btn{
+}
