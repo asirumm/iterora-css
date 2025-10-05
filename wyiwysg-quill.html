@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Froala Test</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/utility.css">
+  <link rel="stylesheet" href="css/partial/buttons.css">
+  <link rel="stylesheet" href="css/partial/form.css">
+  <link rel="stylesheet" href="css/partial/modal.css">
+  <link rel="stylesheet" href="css/partial/card.css">
+  <link rel="stylesheet" href="css/partial/table.css">
+  <link rel="stylesheet" href="css/partial/badge.css">
+
+
+  <link rel="stylesheet" href="quill/quill.snow.css">
+  <link rel="stylesheet" href="quill/custom.css">
+
+  <script src="quill/quill.js"></script>
+
+
+</head>
+<body>
+<div id="editor"></div>
+
+
+</body>
+<script>
+
+  var quill = new Quill('#editor', {
+    theme: 'snow',
+    modules: {
+      toolbar:{
+        container:[
+          ['bold', 'italic', 'underline','strike'],
+          [{ 'header': 1 }, { 'header': 2 },{'header':3},{'header':4}],
+          ['blockquote', 'code-block'],
+          [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+          ['link', 'image','blockquote'],
+          [{'align':['center','right','']}]
+        ],
+        handlers:{
+          'image': handlerUploadImageContent
+        }
+      }
+
+    },
+    placeholder: 'Write your content',
+    syntax: true
+
+  });
+
+  function handlerUploadImageContent() {
+    // bikin input file hidden
+    let fileInput = document.createElement('input');
+    fileInput.setAttribute('type', 'file');
+    fileInput.setAttribute('accept', 'image/*');
+    fileInput.click();
+
+    fileInput.onchange = () => {
+      const file = fileInput.files[0];
+      if (file) {
+        let formData = new FormData();
+        formData.append('content-image', file);
+
+        axios.post("http://localhost:8080/api/content-image", formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        })
+                .then(function (response) {
+                  // ambil posisi cursor
+                  const range = quill.getSelection();
+                  console.log(response.data.url)
+                  // response.data di sini harus berisi URL image dari server
+                  quill.insertEmbed(range.index, 'image', response.data.url);
+                })
+                .catch(function (error) {
+                  console.error("Upload gagal:", error);
+                });
+      }
+    };
+  }
+</script>
+</html>

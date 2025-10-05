@@ -1,0 +1,99 @@
+header.navbar{
+    padding: var(--spacing-12) var(--spacing-28);
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-medium);
+    border-bottom: 1px solid var(--border);
+
+    svg{
+        width: var(--icon);
+        height: var(--icon);
+    }
+}
+.navbar .left{
+    path{
+        fill: var(--primary);
+    }
+}
+
+.navbar .right{
+    display: flex;
+
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-12);
+    }
+
+    ul li a{
+        color: var(--text);
+    }
+
+    ul li a:hover{
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
+    .buttons{
+        display: flex;
+        gap: var(--spacing-8);
+        margin-left: var(--spacing-20);
+    }
+
+}
+.navbar .right .toggle-navbar{
+    display: none;
+}
+
+/* Sidebar Mode ketika max-width: 768px */
+@media (max-width: 768px) {
+    .navbar .menu,
+    .navbar .buttons {
+        display: none; /* awalnya sembunyi */
+    }
+
+    /* Sidebar container */
+    .navbar.sidebar-active .menu,
+    .navbar.sidebar-active .buttons {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 100vh;
+        background: var(--bg);
+        padding: var(--spacing-20);
+        gap: var(--spacing-12);
+        box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    /* kalau aktif geser masuk */
+    .navbar.sidebar-active .menu,
+    .navbar.sidebar-active .buttons {
+        transform: translateX(0);
+    }
+
+    /* Tombol toggle (hamburger) tampil di mobile */
+    .toggle-navbar {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        margin-left: var(--spacing-12);
+    }
+}
+
+/* default: sembunyiin hamburger di desktop */
+.toggle-navbar {
+    display: none;
+}
+

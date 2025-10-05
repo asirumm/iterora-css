@@ -8,7 +8,7 @@
     font-weight: 700;
     text-align: center;
 
-    padding: var(--spacing-8) var(--spacing-12);
+    padding: var(--spacing-8) var(--spacing-16);
     height: fit-content;
     width: fit-content;
 
@@ -19,7 +19,6 @@
 /* Primary */
 .button-primary {
     background-color: var(--primary);
-    border: 1px solid var(--primary);
     color: var(--text);
 }
 .button-primary:hover,
@@ -27,6 +26,14 @@
     filter: brightness(120%);
 }
 
+.button-light{
+    background-color: color-mix(in srgb, var(--primary) 20%, transparent);
+    color: var(--primary);
+}
+.button-light:hover,
+.button-light:focus {
+    filter: brightness(120%);
+}
 /* Outline */
 .button-secondary {
     background-color: transparent;
