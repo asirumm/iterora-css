@@ -3,20 +3,21 @@ img{
     height: auto;
 }
 
-figure{
-    min-height: 5rem;
-    max-height: 10rem;
-    min-width: 10rem;
-    max-width: 15rem;
+figure {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
 
-    .container-image{
-        min-height: 5rem;
-    }
-    img{
+    img {
+        width: 100%;
+        height: auto;
         border-radius: var(--border-radius-round);
+        display: block;
     }
-    figcaption{
+
+    figcaption {
         text-align: center;
         font-size: var(--font-12);
+        margin-top: 8px;
     }
 }

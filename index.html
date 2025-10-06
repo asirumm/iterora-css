@@ -1,25 +1,188 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/root.css">
-  <link rel="stylesheet" href="css/utility.css">
-  <link rel="stylesheet" href="css/partial/buttons.css">
-  <link rel="stylesheet" href="css/partial/form.css">
-  <link rel="stylesheet" href="css/partial/modal.css">
-  <link rel="stylesheet" href="css/partial/card.css">
-  <link rel="stylesheet" href="css/partial/table.css">
-  <link rel="stylesheet" href="css/partial/badge.css">
-  <link rel="stylesheet" href="css/admin.css">
-  <link rel="stylesheet" href="css/admin-content-home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Iterora CSS</title>
 
+    <link rel="stylesheet" href="output.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <title>iterora css</title>
+    <script type="module" src="output.js" defer></script>
 </head>
+
+<style>
+    .example-target{
+        display: none;
+    }
+    .example-target.active{
+        display: block;
+    }
+</style>
+
 <body>
+
+<div class="container">
+    <h2>Component</h2>
+
+    <div class="m-12">
+        <button>default</button>
+        <button class="button button-primary">primary</button>
+        <button class="button button-light">lights</button>
+        <button class="button button-secondary">secondary</button>
+        <button class="button button-primary button-small">small size</button>
+    </div>
+
+    <div class="m-12">
+        <a class="tooltip tooltip-right" data-tooltip="hello">some tooltip</a>
+    </div>
+
+    <div class="m-12">
+        <h1 id="example" class="example-target">Gotcha</h1>
+        <span onclick="toggleOpenClose('example')">example toggle</span>
+    </div>
+
+
+    <div class="m-12">
+        <span>see alert at bottom, if none refersh the page</span>
+        <div class="alert-container bg-success" id="alert">
+            <div class="alert-header">
+                <span class="alert-title">Example alert</span>
+                <span class="button-close" onclick="closeParent('alert')">&times;</span>
+            </div>
+            <span>It will automaticly dispose, when user not click close button.</span>
+        </div>
+    </div>
+
+
+    <div class="m-12">
+        <span class="badge-status badge-status-danger">status badge</span>
+    </div>
+
+
+    <div class="m-12">
+        <figure>
+             <img src="https://images.unsplash.com/photo-1759238136818-7b00ec9e782a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8" class="figure" alt="...">
+            <figcaption >
+                image with caption.
+            </figcaption>
+        </figure>
+    </div>
+
+
+
+    <div class="m-12">
+        <h3>Form</h3>
+        <form class="w-70">
+            <fieldset>
+                <label>
+                    Thumbnail
+                    <input type="file" id="File" autocomplete="off"/>
+                </label>
+                <label>
+                    Name
+                    <input type="text" required="" name="name" placeholder="name">
+                </label>
+                <label>
+                    Phone
+                    <input type="tel" required="" name="phone">
+                </label>
+            </fieldset>
+
+            <fieldset class="vertical">
+                <label class="checkbox">
+                    <input type="checkbox" name="terms-and-conditions">
+                    <span>I agree to the <a href="#">terms and conditions</a></span>
+                </label>
+                <label class="radio"><input type="radio" name="subscription" value="free">Free</label>
+
+                <label>
+                    Description
+                    <textarea></textarea>
+                </label>
+            </fieldset>
+            <fieldset class="actions">
+                <button class="button button-light" type="button">Cancel</button>
+                <button class="button button-primary" type="button">Submit</button>
+            </fieldset>
+
+        </form>
+    </div>
+
+    <div class="m-12">
+        <button class="button button-primary" onclick="toggleOpenClose('modal')">Open Modal</button>
+
+        <div class="modal" id="modal">
+            <div class="modal-container">
+
+                <div class="modal-header">
+                    <span class="title">Header</span>
+                    <span class="button-close" onclick="closeParent('modal')">&times;</span>
+                </div>
+
+                <div class="modal-content">
+                    halo
+                </div>
+
+                <footer>
+                    <span onclick="closeParent('modal')" class="button button-secondary">cancel</span>
+                </footer>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="m-12">
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th role="columnheader">Heading</th>
+                    <th role="columnheader">Heading</th>
+                    <th role="columnheader">Heading</th>
+                    <th role="columnheader">Heading</th>
+                    <th role="columnheader">Heading</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>Total</td>
+                    <td>Total</td>
+                    <td>Total</td>
+                    <td>Total</td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
 
 
 </body>

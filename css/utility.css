@@ -23,3 +23,21 @@
     font-weight: 600;
     font-size: var(--font-20);
 }
+
+.mb-12{
+    margin-bottom: var(--spacing-12);
+}
+.mb-16{
+    margin-bottom: var(--spacing-16);
+}
+.mb-20{
+    margin-bottom: var(--spacing-20);
+}
+
+.m-12{
+    margin: var(--spacing-12);
+}
+
+.w-70{
+    width: 70%;
+}

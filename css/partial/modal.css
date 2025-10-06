@@ -5,9 +5,10 @@
     transform: translate(-50%, -50%);
     z-index: 999;
 
+    background-color: var(--bg-light);
     display: none;
-    width: clamp(20vw, 20rem, calc(100vw - 2 * var(--spacing-16)));
-    height: clamp(8vh, 10rem, calc(100vh - 2 * var(--spacing-16)));
+    min-width: 25rem;
+    min-height: 9rem;
 
     overflow-x: hidden;
     overflow-y: auto;
@@ -33,7 +34,7 @@
     }
 }
 .modal .modal-content{
-    min-height: 4rem;
+    min-height: 6rem;
     padding: var(--spacing-8) var(--spacing-16);
 }
 .modal footer{

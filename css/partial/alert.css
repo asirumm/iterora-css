@@ -7,17 +7,23 @@
     flex-direction: column;
     gap: var(--spacing-4);
 
-    width: fit-content;
+    /*width: fit-content;*/
+    min-width: 20rem;
+    max-width: 27rem;
     height: fit-content;
 
     position: fixed;
     bottom: 1rem;
     right: 1rem;
 
-    animation: hideAlert .1s ease-in 5s;
+    animation: hideAlert .1s ease-in 15s;
     animation-fill-mode: forwards;
 }
-
+.alert-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .alert-title{
     font-weight: 700;
 }
