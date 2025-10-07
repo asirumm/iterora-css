@@ -1,0 +1,16 @@
+@import "css/root.css";
+@import "css/reset.css";
+@import "css/utility.css";
+@import "css/container.css";
+@import "css/partial/tooltip.css";
+@import "css/partial/upload-file.css";
+@import "css/partial/table.css";
+@import "css/partial/modal.css";
+@import "css/partial/image.css";
+@import "css/partial/form.css";
+@import "css/partial/buttons.css";
+@import "css/partial/badge.css";
+@import "css/partial/alert.css";
+@import "css/partial/card.css";
+@import "css/dashboard/dashboard.css";
+@import "css/dashboard/table-dashboard.css";

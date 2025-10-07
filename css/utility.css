@@ -9,6 +9,9 @@
 .bg-success{
     background: var(--success);
 }
+.bg-primary-dark{
+    background: var(--primary-dark);
+}
 
 .text-center{
     text-align: center;

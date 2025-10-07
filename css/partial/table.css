@@ -1,7 +1,17 @@
 .table-wrapper {
     overflow-x: scroll;
 }
-
+.table-wrapper::-webkit-scrollbar{
+    height: 8px;
+    background-color: transparent;
+}
+.table-wrapper::-webkit-scrollbar-thumb{
+    background-color: var(--text-muted);
+}
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--text-muted);
+    border-radius: 4px;
+}
 table {
     min-width: 0;
 }
@@ -23,6 +33,9 @@ tbody tr:hover{
     background: var(--bg-light);
 }
 
+td{
+    min-width: 7rem;
+}
 thead th, thead td {
     border-width: 2px;
 }

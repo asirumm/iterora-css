@@ -48,6 +48,16 @@ button{
 .button-secondary:focus {
     filter: brightness(120%);
 }
+/* Outline */
+.button-primary-dark {
+    background-color: var(--primary-dark);
+    color: var(--text);
+    border: 1px solid var(--primary-dark);
+}
+.button-primary-dark:hover,
+.button-primary-dark:focus {
+    filter: brightness(120%);
+}
 
 .button-small{
     padding: var(--spacing-4) var(--spacing-8);
